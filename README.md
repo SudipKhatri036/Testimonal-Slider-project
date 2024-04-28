@@ -29,8 +29,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/responsive-testimonals-slider-using-vanilla-js-and-sass-8T2euBEdfJ](https://www.frontendmentor.io/solutions/responsive-testimonals-slider-using-vanilla-js-and-sass-8T2euBEdfJ)
+- Live Site URL: [https://testimonalslider.netlify.app/](https://testimonalslider.netlify.app/)
 
 ## My process
 
