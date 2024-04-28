@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap");
+@import "mixins";
+@import "variables";
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  height: calc(100vh - 0px);
+  background: url(/images/pattern-curve.svg) no-repeat left bottom;
+  font-family: $main-fonts;
+  @include flexProp(center, center);
+  flex-direction: column;
+}
+
+#main-container {
+  width: 80%;
+  height: 75vh;
+  @include flexProp(center, center);
+  background: url(/images/pattern-bg.svg) no-repeat right 5% center;
+  background-size: contain;
+}
+
+.content-container {
+  width: 50%;
+  height: 100%;
+  background: url(/images/pattern-quotes.svg) no-repeat left 10% top 20%;
+  @include flexProp(center, flex-start);
+  flex-direction: column;
+  position: relative;
+  left: 5%;
+
+  #testimonials-text {
+    width: 105%;
+    font-size: 1.667vw;
+    color: $primary-color-dark;
+    font-weight: 300;
+    z-index: 99;
+    margin-bottom: 0.5rem;
+  }
+}
+h3 {
+  font-size: 1.5vw;
+  #user-profession {
+    color: $primary-color-greyish;
+    font-weight: 500;
+    margin-left: 0.3rem;
+  }
+}
+
+#img-container {
+  position: relative;
+  height: 100%;
+  @include flexProp(center, center);
+
+  img {
+    height: 80%;
+    max-width: 400px;
+    width: 100%;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+  }
+}
+
+#btn-container {
+  width: 70px;
+  height: 30px;
+  text-align: center;
+  align-content: center;
+  position: absolute;
+  bottom: 5%;
+  left: 10%;
+  background-color: white;
+  padding: 0.4rem 0.5rem;
+  border-radius: 20px;
+  box-shadow: 0px 3px 2px 1px rgba(0, 0, 0, 0.2);
+
+  button {
+    border: none;
+    background-color: transparent;
+
+    $:hover img {
+      filter: brightness(1.5);
+    }
+
+    img {
+      width: 12px;
+      height: 15px;
+    }
+    .prev-btn-img {
+      margin-right: 0.4rem;
+    }
+
+    .prev-btn-img,
+    .next-btn-img {
+      cursor: pointer;
+    }
+
+    .prev-btn-img:hover,
+    .next-btn-img:hover {
+      filter: brightness(1.5);
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  #main-container {
+    height: 60vh;
+  }
+  .content-container {
+    #testimonials-text {
+      width: 90%;
+      font-size: 2vw;
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
+  #main-container {
+    width: 80%;
+    height: 80vh;
+    flex-direction: column-reverse;
+    background: none;
+  }
+  .content-container {
+    width: 50%;
+    background-size: 5%;
+    background-position: top 5% center;
+    justify-content: flex-start;
+    padding-top: 1.5rem;
+    #testimonials-text {
+      font-size: 2vw;
+    }
+  }
+
+  #img-container {
+    width: 90%;
+    background: url(/images/pattern-bg.svg) no-repeat top 5% right 10%;
+    background-size: 110%;
+
+    img {
+      height: 70%;
+      width: 70%;
+    }
+  }
+
+  #btn-container {
+    left: 40%;
+    top: 80%;
+  }
+}
+
+@media screen and (max-width: 435px) {
+  #main-container {
+    width: 100%;
+    height: 100vh;
+  }
+  .content-container {
+    width: 90%;
+    margin: 0 auto;
+    background-size: 15%;
+    background-position: top 5% center;
+
+    #testimonials-text {
+      font-size: 2.6vh;
+    }
+    h3 {
+      font-size: 2vh;
+    }
+  }
+}
